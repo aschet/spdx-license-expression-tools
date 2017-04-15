@@ -68,3 +68,20 @@ Split to licenses or list contained licenses:
 AnyLicenseInfo expression = LicenseInfoFactory.parseSPDXLicenseString("(((LGPL-3.0+ OR MIT) AND GPL-2.0) OR BSD-3-Clause)");
 ExpressionSplitting.splitToLicenses(expression); // -> BSD-3-Clause, LGPL-3.0+, GPL-2.0, MIT
 ```
+# Compiling and Integration
+
+Maven is used as build system. To build from source use:
+
+```
+mvn package
+```
+
+spdx-license-expression-tools is available via the Maven Central Repository:
+
+```
+<dependency>
+  <groupId>com.github.aschet</groupId>
+  <artifactId>spdx-license-expression-tools</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
