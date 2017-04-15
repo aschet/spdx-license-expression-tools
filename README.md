@@ -2,7 +2,7 @@
 
 The [SPDX specification](https://spdx.org/spdx-specification-21-web-version) was created to exchange licensing information along a software supply chain in a standard way. Part of this specification are license expressions which can be used to describe the licensing of a software in a formal way e.g. `(LGPL-3.0 OR MIT)`.
 
-Within the [SPDX tools](https://github.com/spdx/tools), the official specification implementation of the SPDX working group, license expressions are represented as `AnyLicenseInfo` composite. Interacting with this composite can be quite complicated, therefore the spdx-license-expression-tools library was created to provide various operations that can performed on SPDX license expressions:
+Within the [SPDX tools](https://github.com/spdx/tools), the official specification implementation of the SPDX working group, license expressions are represented as `AnyLicenseInfo` composite. Interacting with this composite can be quite complicated, therefore the spdx-license-expression-tools Java library was created to provide various operations that can performed on SPDX license expressions:
 - simplification
 - filtering
 - merging
