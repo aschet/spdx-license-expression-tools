@@ -8,7 +8,7 @@ Within the [SPDX tools](https://github.com/spdx/tools), the official specificati
 - merging
 - splitting
 
-## Simplification
+## Operations
 
 Remove redundant terms transform license expressions to the distributed normal form (DNF):
 
@@ -17,7 +17,7 @@ AnyLicenseInfo expression = LicenseInfoFactory.parseSPDXLicenseString("(((LGPL-3
 ExpressionSimplification.simplify(expression); // -> (BSD-3-Clause OR (LGPL-3.0+ AND GPL-2.0) OR (MIT AND GPL-2.0))
 ```
 
-## Filtering
+### Filtering
 
 Remove operators:
 
@@ -35,7 +35,7 @@ matcher.setLicense(LicenseInfoFactory.parseSPDXLicenseString("LGPL-3.0+"));
 ExpressionFiltering.filterLicenses(expression, matcher); // -> (MIT AND BSD-3-Clause)
 ```
 
-## Merging
+### Merging
 
 Join with `AND`:
 
@@ -53,7 +53,7 @@ AnyLicenseInfo expression2 = LicenseInfoFactory.parseSPDXLicenseString("BSD-3-Cl
 ExpressionMerging.orJoin(expression1, expression2); // -> ((LGPL-3.0+ AND MIT) OR BSD-3-Clause)
 ```
 
-## Splitting
+### Splitting
 
 Split to conjunctive sets (after simplification):
 
@@ -68,7 +68,7 @@ Split to licenses or list contained licenses:
 AnyLicenseInfo expression = LicenseInfoFactory.parseSPDXLicenseString("(((LGPL-3.0+ OR MIT) AND GPL-2.0) OR BSD-3-Clause)");
 ExpressionSplitting.splitToLicenses(expression); // -> BSD-3-Clause, LGPL-3.0+, GPL-2.0, MIT
 ```
-# Compiling and Integration
+## Compiling and Integration
 
 Maven is used as build system. To build from source use:
 
