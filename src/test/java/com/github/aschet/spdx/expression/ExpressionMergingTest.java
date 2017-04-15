@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package tascher.spdx.expression;
+package com.github.aschet.spdx.expression;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,6 +12,8 @@ import org.junit.Test;
 import org.spdx.rdfparser.license.AnyLicenseInfo;
 import org.spdx.rdfparser.license.LicenseInfoFactory;
 import org.spdx.spdxspreadsheet.InvalidLicenseStringException;
+
+import com.github.aschet.spdx.expression.ExpressionMerging;
 
 public class ExpressionMergingTest {
 

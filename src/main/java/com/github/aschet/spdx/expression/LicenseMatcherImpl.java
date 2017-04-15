@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package tascher.spdx.expression;
+package com.github.aschet.spdx.expression;
 
 import java.util.Collection;
 import java.util.LinkedHashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 
 import org.spdx.rdfparser.license.AnyLicenseInfo;
 
-import tascher.spdx.expression.ExpressionFiltering.OperatorFilter;
+import com.github.aschet.spdx.expression.ExpressionFiltering.OperatorFilter;
 
 /**
  * Concrete license matcher implementation.
