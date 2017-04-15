@@ -1,11 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
 	<groupId>com.github.aschet</groupId>
 	<artifactId>spdx-license-expression-tools</artifactId>
+	<version>1.0.0</version> 	
 	<packaging>jar</packaging>
-	<version>1.0.0</version> 
+	
 	<name>SPDX License Expression Tools</name>
 	<description>A library that provides various operations for SPDX license expressions.</description>
+	<url>https://github.com/aschet/spdx-license-expression-tools</url>
+
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -13,7 +17,7 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	<url>https://github.com/aschet/spdx-license-expression-tools</url>
+
 	<developers>
 		<developer>
 			<id>tascher</id>
@@ -21,6 +25,23 @@
 			<email>thomas.ascher@gmx.at</email>
 		</developer>
 	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/aschet/spdx-license-expression-tools.git</connection>
+		<developerConnection>scm:git:ssh://github.com:aschet/spdx-license-expression-tools.git</developerConnection>
+		<url>http://github.com/aschet/spdx-license-expression-tools/tree/master</url>
+	</scm>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,14 +69,18 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>			
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.1</version>			
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
 			</plugin>		
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>				
 				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>				
 				<executions>
 					<execution>
 						<id>attach-sources</id>
@@ -67,7 +92,9 @@
 				</executions>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>			
 				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.10.4</version>				
 				<executions>
 					<execution>
 						<id>attach-javadocs</id>
@@ -78,7 +105,21 @@
 					</execution>
 				</executions>
 			</plugin>
-		</plugins>	
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+					<id>sign-artifacts</id>
+					<phase>verify</phase>
+					<goals>
+						<goal>sign</goal>
+					</goals>
+					</execution>
+				</executions>
+			</plugin>			
+		</plugins>		
 	</build>
 
 	<reporting>
