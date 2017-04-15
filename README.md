@@ -10,6 +10,8 @@ Within the [SPDX tools](https://github.com/spdx/tools), the official specificati
 
 ## Operations
 
+### Simplification
+
 Remove redundant terms transform license expressions to the distributed normal form (DNF):
 
 ```java
