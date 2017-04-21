@@ -35,8 +35,8 @@ public final class ExpressionSplitting {
 
 		final List<AnyLicenseInfo> childExpressions = new ArrayList<>();
 		final AnyLicenseInfo expressionDNF = ExpressionSimplification.simplify(expression);
-		if (TypeInfo.isSet(expressionDNF)) {
-			for (final AnyLicenseInfo childLicenseInfo : ((LicenseSet) expressionDNF).getMembers()) {
+		if (TypeInfo.isDisjuntiveSet(expressionDNF)) {
+			for (final AnyLicenseInfo childLicenseInfo : ((LicenseSet)expressionDNF).getMembers()) {
 				childExpressions.add(childLicenseInfo);
 			}
 		} else {

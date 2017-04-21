@@ -84,6 +84,6 @@ spdx-license-expression-tools is available via the Maven Central Repository:
 <dependency>
   <groupId>com.github.aschet</groupId>
   <artifactId>spdx-license-expression-tools</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 ```
