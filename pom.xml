@@ -3,7 +3,7 @@
 	
 	<groupId>com.github.aschet</groupId>
 	<artifactId>spdx-license-expression-tools</artifactId>
-	<version>1.0.1</version> 	
+	<version>1.1.0</version> 	
 	<packaging>jar</packaging>
 	
 	<name>SPDX License Expression Tools</name>
