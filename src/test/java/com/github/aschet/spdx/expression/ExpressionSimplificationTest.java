@@ -22,7 +22,7 @@ public class ExpressionSimplificationTest {
 				.parseSPDXLicenseString("(((LGPL-3.0+ OR MIT) AND GPL-2.0) OR BSD-3-Clause)");
 		final AnyLicenseInfo simplifiedExpression = ExpressionSimplification.simplify(expression);
 
-		assertEquals("(BSD-3-Clause OR (LGPL-3.0+ AND GPL-2.0) OR (MIT AND GPL-2.0))", simplifiedExpression.toString());
+		assertEquals("(BSD-3-Clause OR (MIT AND GPL-2.0) OR (LGPL-3.0+ AND GPL-2.0))", simplifiedExpression.toString());
 	}
 
 }

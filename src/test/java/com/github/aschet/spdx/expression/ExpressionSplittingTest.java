@@ -33,8 +33,8 @@ public class ExpressionSplittingTest {
 
 		assertEquals(3, expressions.size());
 		assertEquals("BSD-3-Clause", expressions.get(0).toString());
-		assertEquals("(LGPL-3.0+ AND GPL-2.0)", expressions.get(1).toString());
-		assertEquals("(MIT AND GPL-2.0)", expressions.get(2).toString());
+		assertEquals("(MIT AND GPL-2.0)", expressions.get(1).toString());
+		assertEquals("(LGPL-3.0+ AND GPL-2.0)", expressions.get(2).toString());
 	}
 
 	@Test
@@ -42,7 +42,7 @@ public class ExpressionSplittingTest {
 		final Set<AnyLicenseInfo> licenses = ExpressionSplitting.splitToLicenses(expression);
 
 		assertEquals(4, licenses.size());
-		assertEquals("[BSD-3-Clause, LGPL-3.0+, GPL-2.0, MIT]", licenses.toString());
+		assertEquals("[BSD-3-Clause, MIT, GPL-2.0, LGPL-3.0+]", licenses.toString());
 	}
 
 }
